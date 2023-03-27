@@ -1,0 +1,160 @@
+.header-container{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo{
+    position: relative;
+    left: 20%;
+    font-size: 50px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.705);
+    transition: 0.3s;
+}
+
+.logo a:hover{
+    text-shadow: 0px 0px 10px rgb(225, 225, 225);
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: -23%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+}
+
+header ul li{
+    position: relative;
+    display: inline-block;
+    left: 25%;
+    font-size: 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    font-size: 23px;
+    margin: 0 40px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+header ul li a:hover{
+    opacity: 70%;
+    text-decoration: 3px overline rgba(255, 255, 255, 0.800);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.bxs-cart-alt{
+    position: fixed;
+    z-index: 100;
+    top: 5%;
+    left: 95%;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.529);
+    color: black;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.bxs-cart-alt:hover{
+    background-color: rgba(255, 255, 255, 0.859);
+    transition: 0.6s;
+}
+
+.bxs-chevrons-up{
+    position: fixed;
+    z-index: 100;
+    bottom: 4%;
+    left: 95%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.529);
+    color: black;
+    border-radius: 100%;
+}
+
+.bxs-chevrons-up:hover{
+    background-color: rgba(255, 255, 255, 0.859);
+    transition: 0.6s;
+}
+
+footer{
+    position: absolute;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.712);
+    bottom: -100%;
+    width: 100%;
+}
+
+footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+
+footer .social a{
+    font-size: 24px;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 50px;
+    opacity: 70%;
+    transition: 0.3s;
+}
+
+footer .social a:hover{
+    opacity: 100%;
+}
+
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer ul a{
+    color: white;
+    text-decoration: none;
+    opacity: 80%;
+    transition: 0.3s;
+}
+
+footer ul a:hover{
+    opacity: 100%;
+}
+
+footer ul li{
+    display: inline-block;
+    padding: 0 70px;
+}
+
+footer .copyright{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles_main.css">
+    <link rel="stylesheet" href="shop.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Shop</title>
+    <link rel="shortcut icon" href="./Images/logo1.png" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+      <section class="landing">
+        <header>
+            <h1 class="logo"><a href="#"><b>.JOE.</b></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#" target="_self" style="opacity: 70%; text-shadow: 0px 0px 10px rgb(255, 255, 255); text-decoration: 3px rgba(255, 255, 255, 0.800) overline;">Shop</a></li>
+                    <li><a href="#" style="opacity: 50%; cursor: not-allowed;">Queries</a></li>
+                    <li><a href="#" style="opacity: 50%; cursor: not-allowed;">Quiz</a></li>
+                    <li><a href="#" style="opacity: 50%; cursor: not-allowed;">Sitemap</a></li>
+                    <li><a href="#" style="opacity: 50%; cursor: not-allowed;">Thumbnails</a></li>
+                    <li><a href="#" style="opacity: 50%; cursor: not-allowed;">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <video autoplay muted loop plays-inline class="video">
+            <source src="./Images/nike.mp4">
+        </video>
+
+        <div id="anchor"></div>
+
+        <div class="anch">
+            <a href="#anchor"><i class='bx bxs-chevrons-up bx-md'></i></a>
+            <i id="cart-icon" class='bx bxs-cart-alt bx-sm'></i>
+        </div>
+                <!-- Cart -->
+                <div class="cart">
+                    <div id="anchor2"></div>
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- content -->
+                    <div class="cart-content"></div>
+
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+                    <!-- Buy button -->
+                    <button class="custom-btn btn-buy" id="card" onclick="addtoInvoice()">Place Oder</button>
+                    <!-- Cart Close -->
+                    <i class='bx bx-x' id="close-cart"></i>
+        
+                    <div class="container">
+        
+                        <form action="shop.html" target="_self" method="get">
+                            <div class="inputBox">
+                                <span>Card Number*</span>
+                                <input type="text" maxlength="16" class="card-number-input" id="c-number"
+                                        placeholder="################" style="font-size: 1.1rem;">
+                            </div>
+                            <i class='bx bx-x' id="close-card" style="left: 90%; top: 18%; color: rgba(255, 255, 255, 0.671);"></i>
+        
+                            <div class="inputBox">
+                                <span>Card Holder*</span>
+                                <input type="text" class="card-holder-input" id="c-holder" style="font-size: 1.1rem;">
+                            </div>
+        
+                            <div class="inputBox">
+                                <span>Email Address*</span>
+                                <input type="text" class="card-holder-input" id="email-add" style="font-size: 1.1rem;">
+                            </div>
+        
+                            <div class="flexbox">
+                                <div class="inputBox">
+                                    <span>Expiration MM*</span>
+                                    <select class="month-input" style="font-size: 1.1rem;">
+                                        <option value="month" selected disabled>month</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="inputBox">
+                                    <span>Expiration YY*</span>
+                                    <select name="option" class="year-input" style="font-size: 1.1rem;">
+                                        <option value="year" selected disabled>year</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                    </select>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV*</span>
+                                    <input type="text" maxlength="4" class="cvv-input" id="cvv" style="font-size: 1.1rem;">
+                                </div>
+                            </div>
+        
+                            <input type="submit" value="Buy Now" class="submit-btn" id="close" onclick="return checkforblank()">
+        
+                        </form>
+                    </div>
+        
+
+                </div>
+            
+        
+            <!-- Nike 1 -->
+            <div class="card card--1">
+                <div class="card__header card__header--1">
+                    <div class="card__watermark" data-watermark="Air"></div>
+                    <img src="./Images/nike_logo.png" alt="Nike" class="card__logo">
+                    
+                    <span class="price">$120</span>
+                    <h1 class="product-title">Air Structure 1</h1>
+                    <span class="card__subtitle">From the Flymesh upper to the triple-density foam midsole, the Nike Air Zoom Structure 19 Men's Running Shoe offers plenty of support and the response you need for a smooth, stable ride that feels ultra fast.</span>
+                </div>
+                <!-- <div class="card__body"> -->
+                    <img src="./Images/shop1.png" alt="Nike 1" class="product-img" style="position: absolute; top: 40%; left: 20%; width: 103%;">
+                    <!-- <div class="frame"> -->
+                        <button class="custom-btn add-cart"> BUY NOW</button>
+                    <!-- </div> -->
+                    
+                    <span class="card__category">Women's running shoe</span>
+                <!-- </div> -->
+            </div>
+          
+            <!-- Nike 2 -->
+            <div class="card card--2">
+                <div class="card__header card__header--2">
+                    <div class="card__watermark" data-watermark="Low"></div>
+                    <img src="./Images/jordan_logo.png" alt="Nike" class="card__logo" style="position: absolute; top: 4%;">
+                    
+                    <span class="price">$200</span>
+                    <h1 class="product-title" style="padding-top: 8%;">Air Jordan XI Low IE</h1>
+                    <span class="card__subtitle">A final chapter of the 25th anniversary of the Air Jordan XI, the OG black and red Air Jordan XI Low IE returns, re-engineered to the exact 1995 specs.</span>
+                </div>
+                    <img src="./Images/shop2.png" alt="Nike 2" class="product-img"  style="position: absolute; top: 42%; left: 35%; transform: rotate(8deg); width: 100%; height: 47%;">
+                    <button class="custom-btn add-cart">BUY NOW</button>                    
+                    <span class="card__category">Unisex party shoe</span>
+            </div>
+        
+            <!-- Nike 3 -->
+            <div class="card card--3">
+                <div class="card__header card__header--3">
+                    <div class="card__watermark" data-watermark="Vaporfly"></div>
+                    <img src="./Images/nike_logo.png" alt="Nike" class="card__logo">
+                    
+                    <span class="price">$180</span>
+                    <h1 class="product-title">Nike Vaporfly NEXT%</h1>
+                    <span class="card__subtitle">The ZoomX Vaporfly NEXT% brought the latest in ZoomX cushioning technology to both elite and recreational runners, incorporating a full-length carbon plate for outstanding energy return.</span>
+                </div>
+                    <img src="./Images/shop3.png" alt="Nike 3" class="product-img" style="position: absolute; top: 50%; left: 35%; transform: rotate(17deg); width: 101%; height: 40%;">
+                    <button class="custom-btn add-cart">BUY NOW</button>                    
+                    <span class="card__category">Men's walking shoe</span>
+            </div>
+          
+            <!-- Nike 4 -->
+            <div class="card card--4">
+                <div class="card__header card__header--4">
+                    <div class="card__watermark" data-watermark="Solstice"></div>
+                    <img src="./Images/nike_logo.png" alt="Nike" class="card__logo">
+                    
+                    <span class="price">$110</span>
+                    <h1 class="product-title">Air Solstice QS</h1>
+                    <span class="card__subtitle">The Nike Air Solstice draws inspiration from the swoosh's classic running shoes of the 1980's updating the style with premium materials and impressive production quality.</span>
+                </div>
+                    <img src="./Images/shop4.png" alt="Nike 4" class="product-img" style="position: absolute; top: 38%; left: 20%; height: 73%; width: 103%;">
+                    <button class="custom-btn add-cart">BUY NOW</button>                    
+                    <span class="card__category">Men's running shoe</span>
+            </div>
+        
+            <!-- Nike 5 -->
+            <div class="card card--5">
+                <div class="card__header card__header--5">
+                    <div class="card__watermark" data-watermark="Huarache"></div>
+                    <img src="./Images/nike_logo.png" alt="Nike" class="card__logo ">
+                    
+                    <span class="price">$145</span>
+                    <h1 class="product-title">Air Huarache Utility</h1>
+                    <span class="card__subtitle">The Nike Air Huarache Utility Men's Shoe toughens up a famous running shoe with a nylon upper, fused mudguard and vibrant detail.</span>
+                </div>
+                    <img src="./Images/shop5.png" alt="Nike 5" class="product-img" style="position: absolute; top: 53%; left: 35%; height: 33%; width: 103%; transform: rotate(22deg);">
+                    <button class="custom-btn add-cart">BUY NOW</button>                    
+                    <span class="card__category">Men's running shoe</span>
+            </div>
+          
+            <!-- Nike 6 -->
+            <div class="card card--6">
+                <div class="card__header card__header--6">
+                    <div class="card__watermark" data-watermark="Freak"></div>
+                    <img src="./Images/adidas_logo.png" alt="Nike" class="card__logo" style="position: relative; top: -50%;">
+                    
+                    <span class="price">$165</span>
+                    <h1 class="product-title" style="position: absolute; top: 16%;">Zoom Freak 3</h1>
+                    <span class="card__subtitle" style="position: absolute; top: 38%;">The Zoom Freak 3 is built for creating space through radical downhill angles. The shoe’s tech supports the dominant physicality that defines Giannis Antetokounmpo’s style of play and helps to progress his Euro step.</span>
+                </div>
+                    <img src="./Images/shop6.png" alt="Nike 6" class="product-img" style="position: absolute; top: 40%; left: 20%; height: 68%; width: 105%; transform: rotate(-6deg);">
+                    <button class="custom-btn add-cart">BUY NOW</button>
+                    <span class="card__category">Women's walking shoe</span>
+            </div>
+      </section>
+    </main>
+
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide">
+          <span class="text">Never Settle</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">.JOE.</span>
+        </h1>
+      </div>
+    </div>
+    <div class="slider"></div>
+
+    <footer>
+        <section class="footer">
+            <div class="social">
+                <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram bx-md'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook bx-md' ></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter bx-md' ></i></a>
+                <a href="https://www.linkedin.com/login" target="_blank"><i class='bx bxl-linkedin bx-md' ></i></a>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#">Additional Page</a>
+                </li>
+                <li>
+                    <a href="#"><img src="./Images/logo2.png" style="height: 40px; margin-bottom: 40%; margin-left: -100%;" alt=""></a>
+                </li>
+                <li>
+                    <a href="#">Editor Page</a>
+                </li>
+            </ul>
+            <p class="copyright">Copyright &copy; 2022 .JOE. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"></script>
+
+      <script>    
+        function checkforblank() {
+            if (document.getElementById('c-number').value == "") {
+                alert('Please enter your card number correctly');
+                document.getElementById('c-number').style.borderColor = "red"
+                return false;
+            }
+    
+            if (document.getElementById('c-holder').value == "") {
+                alert('Please enter your name');
+                document.getElementById('c-holder').style.borderColor = "red"
+                return false;
+            }
+
+            if (document.getElementById('email-add').value == "") {
+                alert('Please enter your email address');
+                document.getElementById('email-add').style.borderColor = "red"
+                return false;
+            }
+    
+            if (document.getElementById('cvv').value == "") {
+                alert('Please enter card\'s CVV number');
+                document.getElementById('cvv').style.borderColor = "red"
+                return false;
+            } else {
+                window.alert("Thank you for shopping with us.\nNow you will be redirected to the shop.");
+                window.open("shop.html", "_self");
+            }
+        }
+    
+        // Card Details
+        document.querySelector("#card").addEventListener("click", function () {
+            document.querySelector(".container").classList.add("active");
+        });
+    
+        document.querySelector(".container #close-card").addEventListener("click", function () {
+            document.querySelector(".container").classList.remove("active");
+        });
+    </script>
+    <script src="./shop.js"></script>
+  </body>
+</html>
